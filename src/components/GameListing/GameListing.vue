@@ -10,7 +10,7 @@ import GameCard from './GameCard/GameCard.vue';
 import { games } from '../../GameData';
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .GameListing {
   display: flex;
   flex-wrap: wrap;

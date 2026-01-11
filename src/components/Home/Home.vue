@@ -16,7 +16,7 @@ import Logo from '../Logo/Logo.vue';
 
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .home {
   margin-top: 20px;
   display: flex;
@@ -27,14 +27,14 @@ import Logo from '../Logo/Logo.vue';
 
 .separator {
   width: 60%;
-  border: 1px solid #9b92a4;
+  border: 1px solid $highlight-color;
   margin: 0 auto;
-  box-shadow: 0 0 10px #9b92a4;
+  box-shadow: 0 0 10px $highlight-color;
 }
 
 .description {
   font-family: 'Courier New', Courier, monospace;
-  color: #9b92a4;
+  color: $highlight-color;
   text-align: center;
   font-size: 1.2em;
 }

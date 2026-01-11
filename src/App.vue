@@ -7,7 +7,7 @@
   </div>
 </template>
 
-<style>
+<style lang="scss">
 body,
 html {
   margin: 0;
@@ -21,7 +21,7 @@ a * {
 }
 </style>
 
-<style scoped>
+<style scoped lang="scss">
 .main {
   height: 100vh;
   width: 100vw;
@@ -29,7 +29,7 @@ a * {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  background-color: #252426;
+  background-color: $background-color;
   padding-bottom: 50px;
   box-sizing: border-box;
 }

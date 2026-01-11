@@ -24,7 +24,7 @@ const props = defineProps<{
 }>();
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .GameCard {
   width: 200px;
   font-family: 'Courier New', Courier, monospace;
@@ -34,7 +34,7 @@ const props = defineProps<{
 .game-image {
   width: 100%;
   height: auto;
-  border-bottom: 1px solid #b998ce;
+  border-bottom: 1px solid $highlight-color;
 }
 
 .info {

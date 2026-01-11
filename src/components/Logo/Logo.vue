@@ -16,7 +16,7 @@
 import icon from "@/assets/ReactorCoreIcon.png";
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .logo {
   display: flex;
   justify-content: center;

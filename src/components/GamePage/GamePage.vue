@@ -22,7 +22,7 @@ const props = defineProps<{
 const game = computed((): Game | undefined => games.find(game => game.id === Number(props.id)));
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .GamePage {
   color: #ffffff;
   max-width: 800px;
@@ -36,15 +36,15 @@ const game = computed((): Game | undefined => games.find(game => game.id === Num
 
 .button {
   font-family: 'Courier New', Courier, monospace;
-  color: #b998ce;
+  color: $highlight-color;
   padding: 5px 10px;
-  border: 1px solid #b998ce;
+  border: 1px solid $highlight-color;
   border-radius: 5px;
 }
 
 .button:hover {
-  color: #cbabdf;
-  border-color: #cbabdf;
+  color: lighten($highlight-color, 20%);
+  border-color: lighten($highlight-color, 20%);
 }
 
 .image {
