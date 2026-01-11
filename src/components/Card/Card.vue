@@ -30,7 +30,7 @@ const props = defineProps<{
   box-shadow: 0 0 1px $highlight-color;
   overflow: hidden;
   color: $highlight-color;
-  width: 100%;
+  max-width: 100%;
 }
 
 .interactive:hover {

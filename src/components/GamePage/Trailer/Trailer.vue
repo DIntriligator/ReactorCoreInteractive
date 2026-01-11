@@ -2,8 +2,6 @@
   <div class="Trailer">
     <div class="inner">
       <iframe
-        width="560"
-        height="315"
         src="https://www.youtube.com/embed/_5oSez6Cnbo?si=nLRrprv7odscOMLd"
         title="YouTube video player"
         frameborder="0"
@@ -33,8 +31,17 @@
 }
 
 .inner {
+  width: 100%;
+  max-width: 560px;
+  aspect-ratio: 16 / 9;
   border-radius: 10px;
   overflow: hidden;
   border: 1px solid $highlight-color;
+}
+
+.inner iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 </style>
