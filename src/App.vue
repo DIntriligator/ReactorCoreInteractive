@@ -29,7 +29,7 @@ a * {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  background-color: #110418;
+  background-color: #252426;
   padding-bottom: 50px;
   box-sizing: border-box;
 }

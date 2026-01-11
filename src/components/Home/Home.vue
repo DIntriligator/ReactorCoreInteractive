@@ -23,19 +23,18 @@ import Logo from '../Logo/Logo.vue';
   flex-direction: column;
   justify-items: center;
   gap: 20px;
-
 }
 
 .separator {
   width: 60%;
-  border: 1px solid #b998ce;
+  border: 1px solid #9b92a4;
   margin: 0 auto;
-  box-shadow: 0 0 10px #b998ce;
+  box-shadow: 0 0 10px #9b92a4;
 }
 
 .description {
   font-family: 'Courier New', Courier, monospace;
-  color: #b998ce;
+  color: #9b92a4;
   text-align: center;
   font-size: 1.2em;
 }
