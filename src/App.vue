@@ -1,11 +1,35 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <div class="main">
+    <RouterView />
+  </div>
 </template>
 
-<style scoped></style>
+<style>
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+a,
+a * {
+  text-decoration: none;
+}
+</style>
+
+<style scoped>
+.main {
+  height: 100vh;
+  width: 100vw;
+  margin: none;
+  padding: none;
+  display: flex;
+  flex-direction: column;
+  background-color: #110418;
+  padding-bottom: 50px;
+}
+</style>
