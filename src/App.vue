@@ -1,5 +1,4 @@
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div class="main">
@@ -26,7 +25,7 @@ a * {
   height: 100vh;
   width: 100vw;
   margin: none;
-  padding: 20px;
+  padding: $standard-spacing;
   display: flex;
   flex-direction: column;
   background-color: $background-color;

@@ -1,25 +1,45 @@
 <template>
-  <div v-if="game" class="GamePage">
+  <div
+    v-if="game"
+    class="GamePage"
+  >
     <div class="header">
-      <RouterLink to="/" class="button">&#8592; Back to Home</RouterLink>
+      <RouterLink
+        to="/"
+        class="button"
+        >&#8592; Back to Home</RouterLink
+      >
     </div>
 
     <Card>
-      <img class="image" :src="game?.banner" :alt="game?.title" />
+      <div class="flex-container">
+        <img
+          class="image"
+          :src="game?.banner"
+          :alt="game?.title"
+        />
+
+        <div class="content">
+          <Trailer />
+        </div>
+      </div>
     </Card>
   </div>
 </template>
 
 <script setup lang="ts">
-import { games, type Game } from '@/GameData';
-import { computed } from 'vue';
-import Card from '../Card/Card.vue';
+import { games, type Game } from "@/GameData";
+import { computed } from "vue";
+import Card from "../Card/Card.vue";
+import Trailer from "./Trailer/Trailer.vue";
 
 const props = defineProps<{
-  id: string
+  id: string;
 }>();
 
-const game = computed((): Game | undefined => games.find(game => game.id === Number(props.id)));
+const game = computed((): Game | undefined =>
+  games.find((game) => game.id === props.id),
+);
 </script>
 
 <style scoped lang="scss">
@@ -27,15 +47,15 @@ const game = computed((): Game | undefined => games.find(game => game.id === Num
   color: #ffffff;
   max-width: 800px;
   width: 100%;
-  margin: 20px auto;
+  margin: $standard-spacing auto;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: $standard-spacing;
   align-items: flex-start;
 }
 
 .button {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   color: $highlight-color;
   padding: 5px 10px;
   border: 1px solid $highlight-color;
@@ -50,6 +70,21 @@ const game = computed((): Game | undefined => games.find(game => game.id === Num
 .image {
   width: 100%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
+  border-bottom: 1px solid $highlight-color;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: $standard-spacing;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: $standard-spacing;
+  padding: $standard-spacing;
 }
 </style>

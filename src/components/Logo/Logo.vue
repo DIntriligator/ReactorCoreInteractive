@@ -1,14 +1,14 @@
 <template>
   <div class="logo">
-    <img :src="icon" alt="Reactor Core Interactive" class="icon" />
+    <img
+      :src="icon"
+      alt="Reactor Core Interactive"
+      class="icon"
+    />
 
-    <h1>
-      Reactor Core
-    </h1>
+    <h1>Reactor Core</h1>
 
-    <h2>
-      Interactive
-    </h2>
+    <h2>Interactive</h2>
   </div>
 </template>
 
@@ -22,17 +22,18 @@ import icon from "@/assets/ReactorCoreIcon.png";
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: $standard-spacing;
 }
 
-.logo h1, .logo h2 {
-  font-family: 'Teko', sans-serif;
+.logo h1,
+.logo h2 {
+  font-family: "Teko", sans-serif;
   color: #ffffff;
   margin: 0;
   padding: 0;
   line-height: 60%;
   font-weight: 350;
-  letter-spacing:2px;
+  letter-spacing: 2px;
 }
 
 .logo h1 {

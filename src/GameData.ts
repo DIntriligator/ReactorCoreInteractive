@@ -2,7 +2,7 @@ import JovianJump from "@/assets/JovianJump.png";
 import JovianJumpBanner from "@/assets/JovianJumpBanner.png";
 
 export interface Game {
-    id: number;
+    id: string;
     title: string;
     image: string;
     type: string;
@@ -11,7 +11,7 @@ export interface Game {
 
 export const games = [
     {
-        id: 1,
+        id: "jovian-jump",
         title: "Jovian Jump",
         image: JovianJump,
         banner: JovianJumpBanner,
