@@ -1,14 +1,15 @@
 <template>
-  <div class="home">
+  <FadeInStagger class="home">
     <Logo />
 
     <p class="description">Just a solo developer making cool games!</p>
 
     <GameListing />
-  </div>
+  </FadeInStagger>
 </template>
 
 <script setup>
+import FadeInStagger from "../FadeInStagger/FadeInStagger.vue";
 import GameListing from "../GameListing/GameListing.vue";
 import Logo from "../Logo/Logo.vue";
 </script>

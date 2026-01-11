@@ -1,5 +1,5 @@
 <template>
-  <div class="GameListing">
+  <FadeInStagger class="GameListing" :interval="140">
     <GameCard
       v-for="game in games"
       :key="game.id"
@@ -8,10 +8,11 @@
       :title="game.title"
       :type="game.type"
     />
-  </div>
+  </FadeInStagger>
 </template>
 
 <script setup>
+import FadeInStagger from "../FadeInStagger/FadeInStagger.vue";
 import GameCard from "./GameCard/GameCard.vue";
 import { games } from "../../GameData";
 </script>

@@ -7,23 +7,42 @@
       <RouterLink
         to="/"
         class="button"
-        >&#8592; Back to Home</RouterLink
       >
+        <RcButton icon="fa-arrow-left"> Back to Home </RcButton>
+      </RouterLink>
     </div>
 
-    <Card>
-      <div class="flex-container">
-        <img
-          class="image"
-          :src="game?.banner"
-          :alt="game?.title"
-        />
+    <FadeInStagger>
+      <Card>
+        <FadeInStagger class="flex-container">
+          <img
+            class="image"
+            :src="game?.banner"
+            :alt="game?.title"
+          />
 
-        <div class="content">
-          <Trailer />
-        </div>
-      </div>
-    </Card>
+          <div
+            v-if="game?.description"
+            class="content"
+          >
+            <p>
+              {{ game?.description }}
+            </p>
+
+            <span class="centered">
+              <a
+                :href="game?.soundtrack"
+                target="_blank"
+              >
+                <RcButton icon="fa-music"> Soundtrack </RcButton>
+              </a>
+            </span>
+
+            <Trailer />
+          </div>
+        </FadeInStagger>
+      </Card>
+    </FadeInStagger>
   </div>
 </template>
 
@@ -32,6 +51,8 @@ import { games, type Game } from "@/GameData";
 import { computed } from "vue";
 import Card from "../Card/Card.vue";
 import Trailer from "./Trailer/Trailer.vue";
+import FadeInStagger from "../FadeInStagger/FadeInStagger.vue";
+import RcButton from "../RcButton/RcButton.vue";
 
 const props = defineProps<{
   id: string;
@@ -52,19 +73,10 @@ const game = computed((): Game | undefined =>
   flex-direction: column;
   gap: $standard-spacing;
   align-items: flex-start;
-}
 
-.button {
-  font-family: "Courier New", Courier, monospace;
-  color: $highlight-color;
-  padding: 5px 10px;
-  border: 1px solid $highlight-color;
-  border-radius: 5px;
-}
-
-.button:hover {
-  color: lighten($highlight-color, 20%);
-  border-color: lighten($highlight-color, 20%);
+  p {
+    line-height: 1.6;
+  }
 }
 
 .image {
@@ -77,14 +89,19 @@ const game = computed((): Game | undefined =>
 .flex-container {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  align-items: center;
   gap: $standard-spacing;
 }
 
 .content {
   display: flex;
   flex-direction: column;
-  gap: $standard-spacing;
+  gap: calc(#{$standard-spacing} * 2);
   padding: $standard-spacing;
+}
+
+.centered {
+  display: inline-flex;
+  justify-content: center;
 }
 </style>

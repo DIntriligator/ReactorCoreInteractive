@@ -1,14 +1,17 @@
 <template>
-  <span class="Card" :class="{
-    interactive
-  }">
+  <span
+    class="Card"
+    :class="{
+      interactive,
+    }"
+  >
     <slot />
   </span>
 </template>
 
 <script setup lang="ts">
 const props = defineProps<{
-  interactive?: boolean
+  interactive?: boolean;
 }>();
 </script>
 
@@ -16,11 +19,15 @@ const props = defineProps<{
 .Card {
   display: flex;
   flex-direction: column;
-  background-color: lighten($background-color, 5%);
+  background: linear-gradient(
+    135deg,
+    lighten($background-color, 7%),
+    lighten($background-color, 2%)
+  );
   border-radius: 10px;
   transition: transform 0.2s;
   border: 1px solid $highlight-color;
-  box-shadow: 0 0 10px $highlight-color;
+  box-shadow: 0 0 1px $highlight-color;
   overflow: hidden;
   color: $highlight-color;
   width: 100%;
@@ -29,6 +36,6 @@ const props = defineProps<{
 .interactive:hover {
   transform: scale(1.05);
   cursor: pointer;
-  box-shadow: 0 0 20px $highlight-color
+  box-shadow: 0 0 20px $highlight-color;
 }
 </style>
