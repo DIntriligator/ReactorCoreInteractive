@@ -5,7 +5,7 @@
     </div>
 
     <Card>
-      <img class="image" :src="game.banner" :alt="game.title" />
+      <img class="image" :src="game?.banner" :alt="game?.title" />
     </Card>
   </div>
 </template>

@@ -8,7 +8,7 @@
 
 <script setup lang="ts">
 const props = defineProps<{
-  interactive: boolean
+  interactive?: boolean
 }>();
 </script>
 

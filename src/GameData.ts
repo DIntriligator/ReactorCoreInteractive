@@ -1,3 +1,6 @@
+import JovianJump from "@/assets/JovianJump.png";
+import JovianJumpBanner from "@/assets/JovianJumpBanner.png";
+
 export interface Game {
     id: number;
     title: string;
@@ -10,8 +13,8 @@ export const games = [
     {
         id: 1,
         title: "Jovian Jump",
-        image: "/JovianJump.png",
-        banner: "/JovianJumpBanner.png",
+        image: JovianJump,
+        banner: JovianJumpBanner,
         type: "Mobile Game",
     }
 ]
