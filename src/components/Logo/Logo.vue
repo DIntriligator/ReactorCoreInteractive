@@ -1,6 +1,6 @@
 <template>
   <div class="logo">
-    <img src="/ReactorCoreIcon.png" alt="Reactor Core Interactive" class="icon" />
+    <img :src="icon" alt="Reactor Core Interactive" class="icon" />
 
     <h1>
       Reactor Core
@@ -13,6 +13,7 @@
 </template>
 
 <script setup>
+import icon from "@/assets/ReactorCoreIcon.png";
 </script>
 
 <style scoped>
