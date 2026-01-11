@@ -18,7 +18,7 @@ import Logo from '../Logo/Logo.vue';
 
 <style scoped>
 .home {
-  margin-top: 40px;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   justify-items: center;

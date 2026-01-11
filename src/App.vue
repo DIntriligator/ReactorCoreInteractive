@@ -26,10 +26,11 @@ a * {
   height: 100vh;
   width: 100vw;
   margin: none;
-  padding: none;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   background-color: #110418;
   padding-bottom: 50px;
+  box-sizing: border-box;
 }
 </style>
