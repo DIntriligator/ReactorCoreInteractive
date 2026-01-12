@@ -13,7 +13,13 @@ const router = createRouter({
       name: 'GameDetails',
       props: true,
       component: () => import('../components/GamePage/GamePage.vue'),
-    }
+    },
+    {
+      path: '/game/:id/press-kit',
+      name: 'PressKit',
+      props: true,
+      component: () => import('../components/PressKit/PressKit.vue'),
+    },
   ],
 })
 

@@ -1,8 +1,11 @@
 <template>
-  <div class="Trailer">
+  <div
+    v-if="url"
+    class="Trailer"
+  >
     <div class="inner">
       <iframe
-        src="https://www.youtube.com/embed/_5oSez6Cnbo?si=nLRrprv7odscOMLd"
+        :src="url"
         title="YouTube video player"
         frameborder="0"
         allow="
@@ -21,7 +24,11 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup lang="ts">
+const props = defineProps<{
+  url: string;
+}>();
+</script>
 
 <style scoped lang="scss">
 .Trailer {

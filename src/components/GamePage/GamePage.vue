@@ -5,10 +5,22 @@
   >
     <div class="header">
       <RouterLink
-        to="/"
+        :to="{
+          name: 'home',
+        }"
         class="button"
       >
         <RcButton icon="fa-arrow-left"> Back to Home </RcButton>
+      </RouterLink>
+
+      <RouterLink
+        :to="{
+          name: 'PressKit',
+          params: { id: game?.id },
+        }"
+        class="button"
+      >
+        <RcButton icon="fa-file"> Press Kit </RcButton>
       </RouterLink>
     </div>
 
@@ -38,7 +50,7 @@
               </a>
             </span>
 
-            <Trailer />
+            <Trailer :url="game?.trailer" />
           </div>
         </FadeInStagger>
       </Card>
@@ -79,6 +91,13 @@ const game = computed((): Game | undefined =>
   }
 }
 
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: $standard-spacing;
+}
+
 .image {
   width: 100%;
   height: auto;
@@ -98,6 +117,7 @@ const game = computed((): Game | undefined =>
   flex-direction: column;
   gap: calc(#{$standard-spacing} * 2);
   padding: $standard-spacing;
+  padding-bottom: calc($standard-spacing * 2);
 }
 
 .centered {

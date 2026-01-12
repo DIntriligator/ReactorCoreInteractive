@@ -30,6 +30,11 @@ h6 {
   margin: 0;
   padding: 0;
 }
+
+a {
+  color: $link-color !important;
+  text-decoration: none;
+}
 </style>
 
 <style scoped lang="scss">
