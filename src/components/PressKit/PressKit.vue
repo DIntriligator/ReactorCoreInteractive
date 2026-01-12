@@ -109,7 +109,8 @@
             <h2>Trailer</h2>
 
             <a
-              :href="TrailerFile"
+              v-if="game?.trailerFile"
+              :href="game?.trailerFile"
               download
             >
               <RcButton icon="fa-download"> Download Trailer </RcButton>
@@ -137,7 +138,6 @@ import { computed } from "vue";
 import FadeInStagger from "../FadeInStagger/FadeInStagger.vue";
 import Trailer from "../GamePage/Trailer/Trailer.vue";
 import RcButton from "../RcButton/RcButton.vue";
-import TrailerFile from "@/assets/jovian-jump.mp4";
 
 const props = defineProps<{
   id: string;
