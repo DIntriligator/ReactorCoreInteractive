@@ -22,9 +22,10 @@ a .button,
   padding: 5px 10px;
   border: 1px solid $highlight-color;
   border-radius: 5px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 10px;
+  cursor: pointer;
 }
 
 a .button:hover,

@@ -108,7 +108,21 @@
           <div class="keyvalue">
             <h2>Trailer</h2>
 
-            <Trailer :url="game?.trailer" />
+            <a
+              :href="TrailerFile"
+              download
+            >
+              <RcButton icon="fa-download"> Download Trailer </RcButton>
+            </a>
+
+            <Trailer
+              class="trailer"
+              :url="game?.trailer"
+            />
+          </div>
+
+          <div class="keyvalue">
+            <h2>Screenshots & Media Assets</h2>
           </div>
         </div>
       </div>
@@ -122,6 +136,8 @@ import Card from "../Card/Card.vue";
 import { computed } from "vue";
 import FadeInStagger from "../FadeInStagger/FadeInStagger.vue";
 import Trailer from "../GamePage/Trailer/Trailer.vue";
+import RcButton from "../RcButton/RcButton.vue";
+import TrailerFile from "@/assets/jovian-jump.mp4";
 
 const props = defineProps<{
   id: string;
@@ -187,6 +203,11 @@ const game = computed(() => {
     margin-bottom: 10px;
   }
 
+  a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
   ul {
     margin: 0;
     padding-left: 20px;
@@ -205,5 +226,9 @@ h4,
 h5,
 h6 {
   font-family: "courier prime", monospace;
+}
+
+.trailer {
+  justify-content: flex-start;
 }
 </style>
