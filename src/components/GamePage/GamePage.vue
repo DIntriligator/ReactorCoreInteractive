@@ -51,6 +51,8 @@
             </span>
 
             <Trailer :url="game?.trailer" />
+
+            <Screenshots :id="game?.id" />
           </div>
         </FadeInStagger>
       </Card>
@@ -65,6 +67,7 @@ import Card from "../Card/Card.vue";
 import Trailer from "./Trailer/Trailer.vue";
 import FadeInStagger from "../FadeInStagger/FadeInStagger.vue";
 import RcButton from "../RcButton/RcButton.vue";
+import Screenshots from "../Screenshots/Screenshots.vue";
 
 const props = defineProps<{
   id: string;
