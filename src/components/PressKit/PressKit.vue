@@ -40,10 +40,10 @@
             <h3>Email</h3>
 
             <a
-              href="mailto:"
+              href="mailto:reactorcoreinteractive@gmail.com"
               target="_blank"
             >
-              Coming Soon
+              ReactorCoreInteractive@gmail.com
             </a>
           </div>
 
