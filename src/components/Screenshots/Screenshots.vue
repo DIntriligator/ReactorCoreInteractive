@@ -1,6 +1,6 @@
 <template>
   <div class="Screenshots">
-    <h2>Screenshots & Media Assets</h2>
+    <h2>Screenshots</h2>
 
     <a
       v-if="gameScreenshotsZip"
@@ -53,10 +53,13 @@ const screenshotModules = import.meta.glob("@/assets/**/screenshots/**", {
   as: "url",
 }) as Record<string, string>;
 
-const screenshotZipModules = import.meta.glob("@/assets/**/zip/*.zip", {
-  eager: true,
-  as: "url",
-}) as Record<string, string>;
+const screenshotZipModules = import.meta.glob(
+  "@/assets/**/screenshots-archive/*.zip",
+  {
+    eager: true,
+    as: "url",
+  },
+) as Record<string, string>;
 
 const gameScreenshots = computed(() => {
   return Object.entries(screenshotModules)
@@ -68,7 +71,7 @@ const gameScreenshots = computed(() => {
 const gameScreenshotsZip = computed(() => {
   return (
     Object.entries(screenshotZipModules)
-      .filter(([path]) => path.includes(`/${props.id}/zip/`))
+      .filter(([path]) => path.includes(`/${props.id}/screenshots-archive/`))
       .map(([, url]) => url)
       .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))[0] ?? ""
   );

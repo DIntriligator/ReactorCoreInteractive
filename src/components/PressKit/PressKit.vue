@@ -123,6 +123,7 @@
           </div>
 
           <Screenshots :id="game?.id" />
+          <MediaAssets :id="game?.id" />
         </div>
       </div>
     </Card>
@@ -137,6 +138,7 @@ import FadeInStagger from "../FadeInStagger/FadeInStagger.vue";
 import Trailer from "../GamePage/Trailer/Trailer.vue";
 import RcButton from "../RcButton/RcButton.vue";
 import Screenshots from "../Screenshots/Screenshots.vue";
+import MediaAssets from "../MediaAssets/MediaAssets.vue";
 
 const props = defineProps<{
   id: string;
