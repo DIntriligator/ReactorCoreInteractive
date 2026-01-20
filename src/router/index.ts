@@ -20,6 +20,11 @@ const router = createRouter({
       props: true,
       component: () => import('../components/PressKit/PressKit.vue'),
     },
+    {
+      path: '/game/jovian-jump/privacy-policy',
+      name: 'PrivacyPolicy',
+      component: () => import('../components/PrivacyPolicies/JovianJumpPrivacyPolicy.vue'),
+    }
   ],
 })
 
