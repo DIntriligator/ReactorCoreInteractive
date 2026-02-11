@@ -51,24 +51,17 @@
             <h3>Social Media</h3>
 
             <a
-              href="#"
-              target="_blank"
-            >
-              <i class="fa-brands fa-twitter"></i> @ReactorCoreInt
-            </a>
-
-            <a
-              href="#"
+              href="https://www.instagram.com/reactorcoreinteractive/"
               target="_blank"
             >
               <i class="fa-brands fa-instagram"></i> @ReactorCoreInteractive
             </a>
 
             <a
-              href="#"
+              href="https://www.tiktok.com/@reactorcoreintera"
               target="_blank"
             >
-              <i class="fa-brands fa-tiktok"></i> @ReactorCoreInteractive
+              <i class="fa-brands fa-tiktok"></i> @ReactorCoreIntera
             </a>
           </div>
         </div>
