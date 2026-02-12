@@ -58,10 +58,10 @@
             </a>
 
             <a
-              href="https://www.tiktok.com/@reactorcoreintera"
+              href="https://www.tiktok.com/@reactorcoreinteractive"
               target="_blank"
             >
-              <i class="fa-brands fa-tiktok"></i> @ReactorCoreIntera
+              <i class="fa-brands fa-tiktok"></i> @ReactorCoreInteractive
             </a>
           </div>
         </div>
