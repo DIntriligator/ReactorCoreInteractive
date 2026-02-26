@@ -29,6 +29,22 @@
           </div>
 
           <div class="keyvalue">
+            <h3>Store Links</h3>
+
+            <a
+              v-for="link in game?.links"
+              :href="link.link"
+              target="_blank"
+            >
+              <i
+                class="fa-brands"
+                :class="link.icon"
+              ></i>
+              {{ link.name }}
+            </a>
+          </div>
+
+          <div class="keyvalue">
             <h3>Website</h3>
 
             <a href="https://dintriligator.github.io/ReactorCoreInteractive/">

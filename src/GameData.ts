@@ -50,5 +50,17 @@ export const games = [
         history: "Daniel Intriligator is an independent game developer based in Cortlandt Manor, NY. Jovian Jump is the studio’s debut title — a handcrafted mobile platformer built in Godot and designed for quick, satisfying runs.",
         trailer: "https://www.youtube.com/embed/_5oSez6Cnbo?si=nLRrprv7odscOMLd",
         trailerFile: JovianJumpTrailer,
+        links: [
+             {
+                icon: "fa-app-store",
+                link: "https://apps.apple.com/us/app/jovian-jump/id6745131518",
+                name: "App Store"
+             },
+            {
+                icon: "fa-google-play",
+                link: "https://play.google.com/store/apps/details?id=com.reactorfuel.jovianjump",
+                name: "Google Play"
+            },
+        ]
     }
 ]
