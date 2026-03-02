@@ -29,7 +29,7 @@
           </div>
 
           <div class="keyvalue">
-            <h3>Store Links</h3>
+            <h3>Get The Game!</h3>
 
             <a
               v-for="link in game?.links"

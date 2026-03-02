@@ -17,6 +17,11 @@ export interface Game {
     keyFeatures: string[];
     trailer: string;
     trailerFile?: string;
+    links: {
+        icon: string;
+        link: string;
+        name: string;
+    }[];
     
 }
 

@@ -41,16 +41,32 @@
               {{ game?.description }}
             </p>
 
-            <span class="centered">
+            <Trailer :url="game?.trailer" />
+
+            <h2>Get The Game</h2>
+
+            <div class="button-container">
+              <a
+                v-for="link in game?.links"
+                :href="link.link"
+                target="_blank"
+              >
+                <RcButton :icon="`fa-brands ${link.icon}`">
+                  {{ link.name }}
+                </RcButton>
+              </a>
+            </div>
+
+            <h2>Soundtrack</h2>
+
+            <span class="button-container">
               <a
                 :href="game?.soundtrack"
                 target="_blank"
               >
-                <RcButton icon="fa-music"> Soundtrack </RcButton>
+                <RcButton icon="fa-music"> Bandcamp </RcButton>
               </a>
             </span>
-
-            <Trailer :url="game?.trailer" />
 
             <Screenshots :id="game?.id" />
           </div>
@@ -123,8 +139,8 @@ const game = computed((): Game | undefined =>
   padding-bottom: calc($standard-spacing * 2);
 }
 
-.centered {
+.button-container {
   display: inline-flex;
-  justify-content: center;
+  gap: 16px;
 }
 </style>
